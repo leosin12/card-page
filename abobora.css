@@ -1,0 +1,38 @@
+body{
+margin: 0;
+height: 100vh;
+display: grid;
+place-items: center;
+background: hsl(252, 24%, 32%);
+}
+
+
+
+img{
+width: 100%;
+}
+
+.card{
+    width: 25vw;
+    position: relative;
+}
+
+.inner img{
+    aspect-ratio: 9/16;
+    object-fit: cover;
+}
+
+.card:hover .inner{
+    transform: perspective(1200px) translateY(-5%) rotateX(10deg) translateZ(0);
+    box-shadow: 100px 100px 100px 100px rgba(0, 0, 0, 0.75);
+
+    filter: blur(1px);
+}
+
+.card:hover .img2{
+    transform: translate3d(0%, 300%, 0%);
+}
+
+.inner{
+    transition: all 0.5s;
+}
